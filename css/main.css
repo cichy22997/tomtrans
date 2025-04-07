@@ -96,4 +96,26 @@ body {
 
 .feature:nth-child(3) {
     animation-delay: 0.4s;
+}
+
+/* Section Divider */
+.section-divider {
+    height: 2px;
+    background: var(--border-color);
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    border: none;
+    border-top: 1px solid var(--border-color);
+}
+
+.underline-primary {
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+}
+
+/* Selection styles */
+::selection {
+    background-color: var(--primary-color);
+    color: white;
 } 

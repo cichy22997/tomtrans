@@ -107,6 +107,9 @@
         </div>
     </section>
 
+    <div class="section-divider"></div>
+    
+    <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
             <h2>Nasze Rozwiązania</h2>
@@ -114,7 +117,7 @@
             <div class="solutions-container">
                 <div class="solution-item">
                     <div class="solution-image">
-                        <img src="images/truck-fleet.jpg" alt="Flota Pojazdów">
+                        <i class="fas fa-truck fa-3x"></i>
                     </div>
                     <div class="solution-content">
                         <h3>Flota Pojazdów</h3>
@@ -124,7 +127,7 @@
                 </div>
                 <div class="solution-item">
                     <div class="solution-image">
-                        <img src="images/logistics.jpg" alt="Obsługa Logistyczna">
+                        <i class="fas fa-route fa-3x"></i>
                     </div>
                     <div class="solution-content">
                         <h3>Obsługa Logistyczna</h3>
@@ -134,7 +137,7 @@
                 </div>
                 <div class="solution-item">
                     <div class="solution-image">
-                        <img src="images/consulting.jpg" alt="Doradztwo">
+                        <i class="fas fa-comments fa-3x"></i>
                     </div>
                     <div class="solution-content">
                         <h3>Doradztwo</h3>
@@ -146,10 +149,12 @@
         </div>
     </section>
 
+    <div class="section-divider"></div>
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Skontaktuj Się z nami</h2>
-            <p class="contact-intro">Jesteśmy dostępni, aby odpowiedzieć na wszystkie Twoje pytania. Skontaktuj się z nami, a nasz zespół ekspertów pomoże znaleźć najlepsze rozwiązanie dla Twojej firmy.</p>
+            <h2>Skontaktuj się z nami</h2>
+            <p class="contact-intro">Masz pytania? Jesteśmy tutaj, aby pomóc.</p>
+            
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -159,47 +164,52 @@
                             <p><a href="https://www.google.com/maps/search/?api=1&query=ul.+Przemysłowa+1,+62-100+Konin" target="_blank" style="text-decoration: none; color: inherit;">ul. Przemysłowa 1, 62-100 Konin</a></p>
                         </div>
                     </div>
+                    
                     <div class="contact-item">
-                        <i class="fas fa-phone"></i>
+                        <i class="fas fa-phone-alt"></i>
                         <div class="contact-item-content">
                             <h3>Telefon</h3>
-                            <p><a href="tel:+48123456789">+48 123 456 789</a></p>
+                            <p><a href="tel:+48123456789" style="text-decoration: none; color: inherit;">+48 123 456 789</a></p>
                         </div>
                     </div>
+                    
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div class="contact-item-content">
                             <h3>Email</h3>
-                            <p><a href="mailto:kontakt@rumtrans.pl">kontakt@rumtrans.pl</a></p>
+                            <p><a href="mailto:info@rumtrans.pl" style="text-decoration: none; color: inherit;">info@rumtrans.pl</a></p>
                         </div>
                     </div>
+                    
                     <div class="contact-item">
                         <i class="fas fa-clock"></i>
                         <div class="contact-item-content">
                             <h3>Godziny pracy</h3>
-                            <p>Pon-Pt: 8:00 - 18:00</p>
+                            <p>Poniedziałek - Piątek: 8:00 - 16:00</p>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Imię i nazwisko</label>
-                        <input type="text" id="name" placeholder="Twoje imię i nazwisko" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Twój adres email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Telefon</label>
-                        <input type="tel" id="phone" placeholder="Twój numer telefonu">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Wiadomość</label>
-                        <textarea id="message" placeholder="Jak możemy Ci pomóc?" required></textarea>
-                    </div>
-                    <button type="submit">Wyślij wiadomość</button>
-                </form>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Imię i nazwisko</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Wiadomość</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit">Wyślij wiadomość</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
