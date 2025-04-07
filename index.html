@@ -110,47 +110,36 @@
     <section id="services" class="services">
         <div class="container">
             <h2>Nasze Rozwiązania</h2>
+            <p class="services-intro">Oferujemy profesjonalne rozwiązania transportowe dostosowane do potrzeb każdego biznesu. Nasza kompleksowa obsługa zapewnia wysoką jakość i niezawodność.</p>
             <div class="solutions-container">
                 <div class="solution-item">
-                    <div class="solution-icon">
-                        <i class="fas fa-truck-moving"></i>
+                    <div class="solution-image">
+                        <img src="images/truck-fleet.jpg" alt="Flota Pojazdów">
                     </div>
                     <div class="solution-content">
                         <h3>Flota Pojazdów</h3>
                         <p>Dysponujemy szeroką gamą nowoczesnych pojazdów ciężarowych różnych typów i wielkości, dostosowanych do różnorodnych potrzeb transportowych.</p>
-                        <ul class="solution-features">
-                            <li><i class="fas fa-check"></i> Pojazdy Euro 6</li>
-                            <li><i class="fas fa-check"></i> Różne typy naczep</li>
-                            <li><i class="fas fa-check"></i> Nowoczesne wyposażenie</li>
-                        </ul>
+                        <a href="#contact" class="solution-link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="solution-item">
-                    <div class="solution-icon">
-                        <i class="fas fa-route"></i>
+                    <div class="solution-image">
+                        <img src="images/logistics.jpg" alt="Obsługa Logistyczna">
                     </div>
                     <div class="solution-content">
                         <h3>Obsługa Logistyczna</h3>
                         <p>Oferujemy kompleksową obsługę logistyczną, włączając planowanie tras, monitoring pojazdów i optymalizację kosztów transportu.</p>
-                        <ul class="solution-features">
-                            <li><i class="fas fa-check"></i> Monitoring GPS</li>
-                            <li><i class="fas fa-check"></i> Optymalizacja tras</li>
-                            <li><i class="fas fa-check"></i> Raporty online</li>
-                        </ul>
+                        <a href="#contact" class="solution-link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="solution-item">
-                    <div class="solution-icon">
-                        <i class="fas fa-chart-line"></i>
+                    <div class="solution-image">
+                        <img src="images/consulting.jpg" alt="Doradztwo">
                     </div>
                     <div class="solution-content">
                         <h3>Doradztwo</h3>
                         <p>Nasi eksperci pomogą dobrać odpowiednie rozwiązania transportowe dla Twojej firmy, uwzględniając specyfikę branży i indywidualne potrzeby.</p>
-                        <ul class="solution-features">
-                            <li><i class="fas fa-check"></i> Analiza potrzeb</li>
-                            <li><i class="fas fa-check"></i> Optymalizacja kosztów</li>
-                            <li><i class="fas fa-check"></i> Wsparcie 24/7</li>
-                        </ul>
+                        <a href="#contact" class="solution-link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -160,30 +149,55 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Skontaktuj Się z nami</h2>
+            <p class="contact-intro">Jesteśmy dostępni, aby odpowiedzieć na wszystkie Twoje pytania. Skontaktuj się z nami, a nasz zespół ekspertów pomoże znaleźć najlepsze rozwiązanie dla Twojej firmy.</p>
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p>ul. Transportowa 123, 00-001 Warszawa</p>
+                        <div class="contact-item-content">
+                            <h3>Adres</h3>
+                            <p><a href="https://www.google.com/maps/search/?api=1&query=ul.+Przemysłowa+1,+62-100+Konin" target="_blank" style="text-decoration: none; color: inherit;">ul. Przemysłowa 1, 62-100 Konin</a></p>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <p>+48 123 456 789</p>
+                        <div class="contact-item-content">
+                            <h3>Telefon</h3>
+                            <p><a href="tel:+48123456789">+48 123 456 789</a></p>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <p>kontakt@rumtrans.pl</p>
+                        <div class="contact-item-content">
+                            <h3>Email</h3>
+                            <p><a href="mailto:kontakt@rumtrans.pl">kontakt@rumtrans.pl</a></p>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-clock"></i>
-                        <p>Pon-Pt: 8:00 - 18:00</p>
+                        <div class="contact-item-content">
+                            <h3>Godziny pracy</h3>
+                            <p>Pon-Pt: 8:00 - 18:00</p>
+                        </div>
                     </div>
                 </div>
                 <form class="contact-form">
-                    <input type="text" placeholder="Imię i nazwisko" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="tel" placeholder="Telefon">
-                    <textarea placeholder="Wiadomość" required></textarea>
+                    <div class="form-group">
+                        <label for="name">Imię i nazwisko</label>
+                        <input type="text" id="name" placeholder="Twoje imię i nazwisko" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Twój adres email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" placeholder="Twój numer telefonu">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Wiadomość</label>
+                        <textarea id="message" placeholder="Jak możemy Ci pomóc?" required></textarea>
+                    </div>
                     <button type="submit">Wyślij wiadomość</button>
                 </form>
             </div>
@@ -191,33 +205,47 @@
     </section>
 
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>O nas</h4>
-                <p>RumTrans to profesjonalna firma transportowa specjalizująca się w wynajmie pojazdów ciężarowych i transporcie międzynarodowym.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Szybki kontakt</h4>
-                <p><a href="tel:+48123456789"><i class="fas fa-phone"></i> +48 123 456 789</a></p>
-                <p><a href="mailto:kontakt@rumtrans.pl"><i class="fas fa-envelope"></i> kontakt@rumtrans.pl</a></p>
-            </div>
-            <div class="footer-section">
-                <h4>Nawigacja</h4>
-                <a href="#home">Strona Główna</a>
-                <a href="#about">Usługi</a>
-                <a href="#services">Rozwiązania</a>
-                <a href="#contact">Kontakt</a>
-            </div>
-            <div class="footer-section">
-                <h4>Social Media</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>O nas</h3>
+                    <p>RumTrans to profesjonalna firma transportowa specjalizująca się w wynajmie pojazdów ciężarowych i transporcie międzynarodowym.</p>
+                    <div class="social-links">
+                        <a href="#" style="text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="text-decoration: none;"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" style="text-decoration: none;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Szybki kontakt</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+48123456789"><i class="fas fa-phone"></i> +48 123 456 789</a></li>
+                        <li><a href="mailto:kontakt@rumtrans.pl"><i class="fas fa-envelope"></i> kontakt@rumtrans.pl</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> ul. Transportowa 123, Warszawa</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Usługi</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Wynajem krótkoterminowy</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Wynajem długoterminowy</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Transport międzynarodowy</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Obsługa logistyczna</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Nawigacja</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Strona główna</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Usługi</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Rozwiązania</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Kontakt</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 RumTrans. Wszelkie prawa zastrzeżone.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 RumTrans. Wszelkie prawa zastrzeżone.</p>
+            </div>
         </div>
     </footer>
 

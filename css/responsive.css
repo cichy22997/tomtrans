@@ -89,14 +89,30 @@
 
     .features {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .feature {
+        min-height: auto;
+        padding: 1.5rem;
     }
 
     .solutions-container {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .solution-item {
+        max-width: 100%;
     }
 
     .contact-container {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-item {
+        padding: 1.25rem;
     }
 
     .about h2,
@@ -143,7 +159,15 @@
         font-size: 1.8rem;
     }
 
-    .service {
+    .feature {
+        padding: 1.25rem;
+    }
+
+    .solution-item {
+        margin: 0;
+    }
+
+    .contact-form {
         padding: 1.5rem;
     }
 
@@ -158,6 +182,11 @@
     
     .footer-section {
         text-align: center;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     .social-links {

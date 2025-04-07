@@ -117,7 +117,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.feature, .solution-item, .hero-text, .hero-stats').forEach(element => {
+document.querySelectorAll('.feature, .solution-item, .hero-text, .hero-stats, .contact-item, .footer-section').forEach(element => {
     observer.observe(element);
 });
 
@@ -164,4 +164,15 @@ if (contactForm) {
             input.classList.remove('error');
         });
     });
-} 
+}
+
+// Add hover effects to elements
+document.querySelectorAll('.feature, .solution-item, .contact-item, .footer-links a, .social-links a').forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        element.style.transform = 'translateY(-5px)';
+    });
+    
+    element.addEventListener('mouseleave', () => {
+        element.style.transform = 'translateY(0)';
+    });
+}); 

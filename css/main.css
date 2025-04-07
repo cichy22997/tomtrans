@@ -13,13 +13,17 @@
 
 :root {
     --primary-color: #6366f1;
+    --primary-color-rgb: 99, 102, 241;
     --secondary-color: #1e293b;
     --accent-color: #8b5cf6;
     --accent-color-dark: #7c3aed;
     --text-color: #1e293b;
+    --text-secondary: #64748b;
     --text-color-light: #64748b;
     --background-color: #ffffff;
     --background-color-alt: #f8fafc;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
     --border-color: #e2e8f0;
     --success-color: #10b981;
     --error-color: #ef4444;
@@ -30,18 +34,23 @@
     --border-radius: 1rem;
     --border-radius-sm: 0.5rem;
     --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --transition: all 0.3s ease;
 }
 
 [data-theme="dark"] {
     --primary-color: #818cf8;
+    --primary-color-rgb: 129, 140, 248;
     --secondary-color: #0f172a;
     --accent-color: #a78bfa;
     --accent-color-dark: #8b5cf6;
     --text-color: #f1f5f9;
+    --text-secondary: #94a3b8;
     --text-color-light: #94a3b8;
     --background-color: #0f172a;
     --background-color-alt: #1e293b;
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
     --border-color: #334155;
     --glass-bg: rgba(15, 23, 42, 0.1);
     --glass-border: rgba(255, 255, 255, 0.1);
