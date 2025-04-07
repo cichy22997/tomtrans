@@ -70,9 +70,7 @@ header {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: var(--glass-bg);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--glass-border);
+    background: transparent;
     transition: var(--transition);
 }
 
@@ -83,7 +81,7 @@ header.scrolled {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 1rem 2rem;
     max-width: 1200px;
@@ -93,8 +91,14 @@ nav {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: white;
     text-decoration: none;
+    margin-right: auto;
+    transition: var(--transition);
+}
+
+header.scrolled .logo {
+    color: var(--primary-color);
 }
 
 .nav-links {
@@ -104,11 +108,15 @@ nav {
 }
 
 .nav-links a {
-    color: var(--text-color);
+    color: white;
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
     position: relative;
+}
+
+header.scrolled .nav-links a {
+    color: var(--text-color);
 }
 
 .nav-links a::after {
@@ -134,11 +142,15 @@ nav {
 .theme-switch button {
     background: none;
     border: none;
-    color: var(--text-color);
+    color: white;
     cursor: pointer;
     font-size: 1.25rem;
     padding: 0.5rem;
     transition: var(--transition);
+}
+
+header.scrolled .theme-switch button {
+    color: var(--text-color);
 }
 
 .theme-switch button:hover {
@@ -197,7 +209,7 @@ nav {
 }
 
 .hero-btn {
-    padding: 1rem 2rem;
+    padding: 0.75rem 1.5rem;
     border-radius: var(--border-radius);
     font-weight: 600;
     text-decoration: none;
@@ -442,6 +454,8 @@ nav {
     background: var(--background-color);
     color: var(--text-color);
     transition: var(--transition);
+    resize: none;
+    max-width: 100%;
 }
 
 .contact-form input:focus,
@@ -452,7 +466,7 @@ nav {
 }
 
 .contact-form button {
-    padding: 1rem 2rem;
+    padding: 0.75rem 1.5rem;
     background: var(--primary-color);
     color: white;
     border: none;
@@ -535,9 +549,14 @@ footer {
     display: none;
     background: none;
     border: none;
-    color: var(--text-color);
+    color: white;
     font-size: 1.5rem;
     cursor: pointer;
+    transition: var(--transition);
+}
+
+header.scrolled .mobile-menu-btn {
+    color: var(--text-color);
 }
 
 .mobile-menu {

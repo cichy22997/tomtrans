@@ -30,15 +30,11 @@ let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
+    // Sprawdzamy, czy jesteśmy na samej górze strony
     if (currentScroll <= 0) {
         header.classList.remove('scrolled');
-        return;
-    }
-    
-    if (currentScroll > lastScroll && !header.classList.contains('scrolled')) {
+    } else {
         header.classList.add('scrolled');
-    } else if (currentScroll < lastScroll && header.classList.contains('scrolled')) {
-        header.classList.remove('scrolled');
     }
     
     lastScroll = currentScroll;
