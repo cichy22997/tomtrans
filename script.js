@@ -77,6 +77,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Scroll indicator functionality
+const scrollIndicator = document.querySelector('.hero-scroll-indicator');
+if (scrollIndicator) {
+    scrollIndicator.addEventListener('click', () => {
+        const aboutSection = document.querySelector('#about');
+        if (aboutSection) {
+            aboutSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+    
+    // Hide scroll indicator when user scrolls down
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 100) {
+            scrollIndicator.style.opacity = '0';
+        } else {
+            scrollIndicator.style.opacity = '0.7';
+        }
+    });
+}
+
 // Intersection Observer for animations
 const observerOptions = {
     root: null,
@@ -94,7 +117,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.feature, .solution-item').forEach(element => {
+document.querySelectorAll('.feature, .solution-item, .hero-text, .hero-stats').forEach(element => {
     observer.observe(element);
 });
 
