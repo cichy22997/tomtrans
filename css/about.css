@@ -1,0 +1,73 @@
+/* About Section (Services Overview) */
+.about {
+    padding: 6rem 0;
+    background: var(--background-color-alt);
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    position: relative;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.about h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+.about-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    color: var(--text-color-light);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature {
+    background: var(--background-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow);
+    border-color: var(--primary-color);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.feature p {
+    color: var(--text-color-light);
+} 
