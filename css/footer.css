@@ -29,6 +29,22 @@
     margin-bottom: 1rem;
 }
 
+.footer-section p a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-section p a:hover {
+    color: var(--primary-color);
+}
+
+.footer-section p a i {
+    margin-right: 0.5rem;
+}
+
 .footer-section a {
     display: block;
     color: var(--text-color-light);
