@@ -32,6 +32,13 @@
         display: block;
     }
 
+    .hero {
+        width: 100vw;
+        min-width: 100vw;
+        left: 0;
+        right: 0;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }
