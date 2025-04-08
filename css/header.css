@@ -11,7 +11,8 @@ header {
 
 header.scrolled {
     background: var(--background-color);
-    box-shadow: var(--box-shadow);
+    box-shadow: none;
+    border-bottom: 1px solid var(--border-color);
 }
 
 nav {

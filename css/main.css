@@ -25,16 +25,17 @@
     --bg-color: #f8fafc;
     --card-bg: #ffffff;
     --border-color: #e2e8f0;
+    --border-color-dark: #cbd5e1;
     --success-color: #10b981;
     --error-color: #ef4444;
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    --neon-glow: 0 0 10px rgba(99, 102, 241, 0.5);
+    --glass-shadow: none;
+    --neon-glow: none;
     --border-radius: 1rem;
     --border-radius-sm: 0.5rem;
-    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --box-shadow: none;
+    --card-shadow: none;
     --transition: all 0.3s ease;
 }
 
@@ -52,9 +53,10 @@
     --bg-color: #0f172a;
     --card-bg: #1e293b;
     --border-color: #334155;
+    --border-color-dark: #475569;
     --glass-bg: rgba(15, 23, 42, 0.1);
     --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --glass-shadow: none;
 }
 
 body {
