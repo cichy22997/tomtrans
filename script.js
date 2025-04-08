@@ -128,6 +128,12 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('animate');
+            
+            // If the element is the hero-stats, trigger the counter animation
+            if (entry.target.classList.contains('hero-stats')) {
+                animateCounters();
+            }
+            
             observer.unobserve(entry.target);
         }
     });
@@ -137,6 +143,48 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.feature, .solution-item, .hero-text, .hero-stats, .contact-item, .footer-section').forEach(element => {
     observer.observe(element);
 });
+
+// Function to animate the statistics counters
+function animateCounters() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    statNumbers.forEach(statNumber => {
+        // Get the target value from the text content (remove the '+' if present)
+        const targetValue = parseInt(statNumber.textContent.replace('+', ''));
+        const hasPlus = statNumber.textContent.includes('+');
+        let currentValue = 0;
+        const duration = 1000; // Animation duration in milliseconds (reduced from 2000)
+        const steps = 30; // Number of steps in the animation (reduced from 60)
+        const stepDuration = duration / steps;
+        const increment = targetValue / steps;
+        
+        // Clear the text content to start with 0
+        statNumber.textContent = '0';
+        
+        // Animate the counter
+        const counterInterval = setInterval(() => {
+            currentValue += increment;
+            
+            // If we've reached or exceeded the target, set to the target and clear the interval
+            if (currentValue >= targetValue) {
+                // First set the number without the plus
+                statNumber.textContent = targetValue;
+                
+                // Then add the plus symbol after a short delay
+                if (hasPlus) {
+                    setTimeout(() => {
+                        statNumber.textContent = targetValue + '+';
+                    }, 100);
+                }
+                
+                clearInterval(counterInterval);
+            } else {
+                // Otherwise, update with the current value (rounded to avoid decimals)
+                statNumber.textContent = Math.floor(currentValue);
+            }
+        }, stepDuration);
+    });
+}
 
 // Form validation and submission
 const contactForm = document.getElementById('contactForm');
