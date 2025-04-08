@@ -112,7 +112,6 @@
     background: var(--bg-color);
     position: relative;
     overflow: hidden;
-    border-top: 2px solid var(--border-color);
 }
 
 .services::before {
