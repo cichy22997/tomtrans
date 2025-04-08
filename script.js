@@ -13,9 +13,26 @@ themeToggle.addEventListener('click', () => {
     const currentTheme = html.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     
-    html.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcon(newTheme);
+    // Create and add the theme transition overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'theme-transition-overlay';
+    document.body.appendChild(overlay);
+    
+    // Add the theme change class to the body
+    document.body.classList.add('theme-changing');
+    
+    // Change the theme after a short delay
+    setTimeout(() => {
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+        
+        // Remove the overlay and theme-changing class after animation completes
+        setTimeout(() => {
+            overlay.remove();
+            document.body.classList.remove('theme-changing');
+        }, 500);
+    }, 300);
 });
 
 // Update theme icon based on current theme
