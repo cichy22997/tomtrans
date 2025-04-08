@@ -139,7 +139,7 @@ document.querySelectorAll('.feature, .solution-item, .hero-text, .hero-stats, .c
 });
 
 // Form validation and submission
-const contactForm = document.querySelector('.contact-form');
+const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -159,19 +159,23 @@ if (contactForm) {
         }
         
         if (isValid) {
-            // Here you would typically send the form data to your server
-            console.log('Form submitted successfully');
+            // Get form values
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            
+            // Create email subject and body
+            const subject = `Wiadomość od ${name} - RumTrans`;
+            const body = `Imię i nazwisko: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AWiadomość:%0D%0A${message}`;
+            
+            // Open default email client
+            window.location.href = `mailto:cichy229@gmail.com?subject=${subject}&body=${body}`;
+            
+            // Reset form
             contactForm.reset();
             
-            // Show success message
-            const successMessage = document.createElement('div');
-            successMessage.className = 'success-message';
-            successMessage.textContent = 'Dziękujemy za wiadomość! Skontaktujemy się wkrótce.';
-            contactForm.appendChild(successMessage);
-            
-            setTimeout(() => {
-                successMessage.remove();
-            }, 5000);
+            // Show toast notification
+            showToast('Otwieranie klienta poczty...', 'fas fa-envelope');
         }
     });
     
@@ -181,6 +185,62 @@ if (contactForm) {
             input.classList.remove('error');
         });
     });
+}
+
+// Toast notification function
+function showToast(message, icon = 'fas fa-info-circle') {
+    // Create toast container if it doesn't exist
+    let toastContainer = document.querySelector('.toast-container');
+    if (!toastContainer) {
+        toastContainer = document.createElement('div');
+        toastContainer.className = 'toast-container';
+        document.body.appendChild(toastContainer);
+    }
+    
+    // Create toast element
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    
+    // Create toast content
+    const toastContent = document.createElement('div');
+    toastContent.className = 'toast-content';
+    
+    // Add icon
+    const toastIcon = document.createElement('i');
+    toastIcon.className = `toast-icon ${icon}`;
+    toastContent.appendChild(toastIcon);
+    
+    // Add message
+    const toastMessage = document.createElement('div');
+    toastMessage.className = 'toast-message';
+    toastMessage.textContent = message;
+    toastContent.appendChild(toastMessage);
+    
+    // Add close button
+    const closeButton = document.createElement('button');
+    closeButton.className = 'toast-close';
+    closeButton.innerHTML = '&times;';
+    closeButton.addEventListener('click', () => {
+        toast.remove();
+    });
+    
+    // Assemble toast
+    toast.appendChild(toastContent);
+    toast.appendChild(closeButton);
+    toastContainer.appendChild(toast);
+    
+    // Show toast with animation
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 10);
+    
+    // Remove toast after 3 seconds
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => {
+            toast.remove();
+        }, 300);
+    }, 3000);
 }
 
 // Add hover effects to elements
