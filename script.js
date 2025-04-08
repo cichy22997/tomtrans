@@ -31,8 +31,8 @@ themeToggle.addEventListener('click', () => {
         setTimeout(() => {
             overlay.remove();
             document.body.classList.remove('theme-changing');
-        }, 500);
-    }, 300);
+        }, 800);
+    }, 400);
 });
 
 // Update theme icon based on current theme

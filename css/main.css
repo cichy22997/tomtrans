@@ -11,6 +11,22 @@
     display: none; /* Chrome, Safari, Opera */
 }
 
+/* Global link styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Contact item link styles */
+.contact-item a,
+.contact-item-content a,
+.contact-item-content p a {
+    text-decoration: none !important;
+    color: inherit !important;
+    border: none !important;
+    outline: none !important;
+}
+
 :root {
     --primary-color: #6366f1;
     --primary-color-rgb: 99, 102, 241;
@@ -36,7 +52,7 @@
     --border-radius-sm: 0.5rem;
     --box-shadow: none;
     --card-shadow: none;
-    --transition: all 0.3s ease;
+    --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-theme="dark"] {
@@ -133,7 +149,7 @@ body {
     opacity: 0;
     z-index: 9999;
     pointer-events: none;
-    animation: themePulse 0.8s ease-in-out;
+    animation: themePulse 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes themePulse {
@@ -152,11 +168,19 @@ body {
 }
 
 .theme-changing {
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .theme-changing * {
-    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Theme toggle button animation */
@@ -172,7 +196,8 @@ body {
 #theme-toggle i {
     position: relative;
     z-index: 1;
-    transition: transform 0.5s ease, color 0.5s ease;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #theme-toggle:hover i {
