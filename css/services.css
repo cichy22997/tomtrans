@@ -204,12 +204,24 @@
         font-size: 2.2rem;
     }
     
+    .services-intro {
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+    }
+    
     .solutions-container {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-top: 2rem;
+        margin-top: 2rem;
     }
     
     .solution-image {
         height: 180px;
+    }
+    
+    .solution-content {
+        padding: 1.5rem;
     }
 }
 
@@ -222,7 +234,20 @@
         font-size: 2rem;
     }
     
+    .services-intro {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
     .solution-content {
-        padding: 1.5rem;
+        padding: 1.25rem;
+    }
+    
+    .solution-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .solution-content p {
+        font-size: 0.95rem;
     }
 } 

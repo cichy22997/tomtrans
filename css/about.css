@@ -105,4 +105,67 @@
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 0;
+}
+
+/* Responsive styles for about section */
+@media (max-width: 1024px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 4rem 0;
+    }
+    
+    .about h2 {
+        font-size: 2.2rem;
+    }
+    
+    .about-intro {
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .feature {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        padding: 3rem 0;
+    }
+    
+    .about h2 {
+        font-size: 2rem;
+    }
+    
+    .about-intro {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .feature {
+        padding: 1.25rem;
+    }
+    
+    .feature h3 {
+        font-size: 1.3rem;
+    }
+    
+    .feature p {
+        font-size: 0.95rem;
+    }
+    
+    .feature i {
+        font-size: 2rem;
+    }
 } 

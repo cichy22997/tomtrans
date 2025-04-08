@@ -231,4 +231,37 @@
     .hero {
         padding: 5rem 0 2rem;
     }
+    
+    /* Fix for mobile menu */
+    .mobile-menu {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Fix for container padding */
+    .container {
+        padding: 0 1rem;
+    }
+    
+    /* Fix for section spacing */
+    .about, .services, .contact {
+        padding: 3rem 0;
+    }
+    
+    /* Fix for grid layouts */
+    .features, .solutions-container, .contact-container {
+        gap: 1.25rem;
+    }
+    
+    /* Fix for text sizes */
+    .about-intro, .services-intro, .contact-intro {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Fix for buttons */
+    .hero-btn, .solution-link, .contact-form button {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.9rem;
+    }
 } 
