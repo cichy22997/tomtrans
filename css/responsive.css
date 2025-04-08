@@ -193,6 +193,22 @@
         justify-content: center;
     }
     
+    /* Fix for footer links on mobile */
+    .footer-links a {
+        justify-content: center;
+        text-align: center;
+        white-space: normal;
+        word-break: break-word;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .footer-links a i {
+        margin-right: 0;
+        flex-shrink: 0;
+    }
+    
     .hero-badge {
         font-size: 0.8rem;
         padding: 0.4rem 0.8rem;

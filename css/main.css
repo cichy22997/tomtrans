@@ -28,20 +28,24 @@ a {
 }
 
 :root {
-    --primary-color: #6366f1;
-    --primary-color-rgb: 99, 102, 241;
-    --secondary-color: #1e293b;
-    --accent-color: #8b5cf6;
-    --accent-color-dark: #7c3aed;
-    --text-color: #1e293b;
-    --text-secondary: #64748b;
-    --text-color-light: #64748b;
-    --background-color: #ffffff;
-    --background-color-alt: #f8fafc;
-    --bg-color: #f8fafc;
+    /* Light theme variables */
+    --bg-color: #ffffff;
+    --text-color: #1f2937;
+    --text-secondary: #4b5563;
+    --border-color: #e5e7eb;
     --card-bg: #ffffff;
-    --border-color: #e2e8f0;
-    --border-color-dark: #cbd5e1;
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --primary-color: #2563eb;
+    --primary-color-rgb: 37, 99, 235;
+    --accent-color: #3b82f6;
+    --accent-color-dark: #1d4ed8;
+    --highlight-color: #1e40af;
+    --background-color: #f9fafb;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --text-color-light: #64748b;
+    --background-color-alt: #f8fafc;
     --success-color: #10b981;
     --error-color: #ef4444;
     --glass-bg: rgba(255, 255, 255, 0.1);
@@ -50,26 +54,29 @@ a {
     --neon-glow: none;
     --border-radius: 1rem;
     --border-radius-sm: 0.5rem;
-    --box-shadow: none;
     --card-shadow: none;
-    --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-theme="dark"] {
+    /* Dark theme variables */
+    --bg-color: #111827;
+    --text-color: #f9fafb;
+    --text-secondary: #d1d5db;
+    --border-color: #374151;
+    --card-bg: #1f2937;
+    --header-bg: rgba(17, 24, 39, 0.95);
+    --shadow-color: rgba(0, 0, 0, 0.3);
     --primary-color: #3b82f6;
     --primary-color-rgb: 59, 130, 246;
-    --secondary-color: #0f172a;
     --accent-color: #60a5fa;
     --accent-color-dark: #3b82f6;
-    --text-color: #f1f5f9;
-    --text-secondary: #94a3b8;
+    --highlight-color: #3b82f6;
+    --background-color: #1f2937;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     --text-color-light: #94a3b8;
-    --background-color: #0f172a;
     --background-color-alt: #1e293b;
-    --bg-color: #0f172a;
-    --card-bg: #1e293b;
-    --border-color: #334155;
-    --border-color-dark: #475569;
+    --success-color: #10b981;
+    --error-color: #ef4444;
     --glass-bg: rgba(15, 23, 42, 0.1);
     --glass-border: rgba(255, 255, 255, 0.1);
     --glass-shadow: none;

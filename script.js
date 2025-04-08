@@ -218,7 +218,7 @@ if (contactForm) {
             const message = formData.get('message');
             
             // Create email subject and body
-            const subject = `Wiadomość od ${name} - RumTrans`;
+            const subject = `Wiadomość od ${name} - TomTrans`;
             const body = `Imię i nazwisko: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AWiadomość:%0D%0A${message}`;
             
             // Open default email client
