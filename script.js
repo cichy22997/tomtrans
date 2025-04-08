@@ -117,44 +117,19 @@ if (scrollIndicator) {
     });
 }
 
-// Intersection Observer for animations
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-            
-            // If the element is the hero-stats, trigger the counter animation
-            if (entry.target.classList.contains('hero-stats')) {
-                animateCounters();
-            }
-            
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Observe elements for animation
-document.querySelectorAll('.feature, .solution-item, .hero-text, .hero-stats, .contact-item, .footer-section').forEach(element => {
-    observer.observe(element);
-});
-
 // Function to animate the statistics counters
 function animateCounters() {
     const statNumbers = document.querySelectorAll('.stat-number');
     
     statNumbers.forEach(statNumber => {
+        // Store the original text content
+        const originalText = statNumber.textContent;
         // Get the target value from the text content (remove the '+' if present)
-        const targetValue = parseInt(statNumber.textContent.replace('+', ''));
-        const hasPlus = statNumber.textContent.includes('+');
+        const targetValue = parseInt(originalText.replace('+', ''));
+        const hasPlus = originalText.includes('+');
         let currentValue = 0;
-        const duration = 1000; // Animation duration in milliseconds (reduced from 2000)
-        const steps = 30; // Number of steps in the animation (reduced from 60)
+        const duration = 1000; // Animation duration in milliseconds
+        const steps = 30; // Number of steps in the animation
         const stepDuration = duration / steps;
         const increment = targetValue / steps;
         
@@ -185,6 +160,36 @@ function animateCounters() {
         }, stepDuration);
     });
 }
+
+// Intersection Observer for animations
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            
+            // If the element is the hero-stats, trigger the counter animation
+            if (entry.target.classList.contains('hero-stats')) {
+                // Wait for the fadeInUp animation to complete (0.8s) plus a small buffer
+                setTimeout(() => {
+                    animateCounters();
+                }, 500);
+            }
+            
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe elements for animation
+document.querySelectorAll('.feature, .solution-item, .hero-text, .hero-stats, .contact-item, .footer-section').forEach(element => {
+    observer.observe(element);
+});
 
 // Form validation and submission
 const contactForm = document.getElementById('contactForm');
