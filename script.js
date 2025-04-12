@@ -222,7 +222,7 @@ if (contactForm) {
             const body = `Imię i nazwisko: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AWiadomość:%0D%0A${message}`;
             
             // Open default email client
-            window.location.href = `mailto:cichy229@gmail.com?subject=${subject}&body=${body}`;
+            window.location.href = `mailto:tomtrans.at@gmail.com?subject=${subject}&body=${body}`;
             
             // Reset form
             contactForm.reset();
